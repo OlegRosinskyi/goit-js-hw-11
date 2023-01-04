@@ -18,3 +18,40 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+.search-form{
+  background-color: rgb(24, 168, 224);
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: baseline;
+  row-gap: 15px;
+}
+.photo-card{
+  width: calc((100% - 40px) / 4);
+  height: auto;
+}
+
+.info {
+    
+  display: flex;
+  justify-content: space-around;
+
+  
+}
+.info-item{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
+
