@@ -18,6 +18,12 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+.disabled {
+  pointer-events: none;
+  /* <----------- */
+  opacity: 0.5;
+}
+
 .search-form{
   background-color: rgb(24, 168, 224);
   margin-left: 0px;
@@ -42,7 +48,7 @@ body {
 }
 
 .info {
-    
+  
   display: flex;
   justify-content: space-around;
 
