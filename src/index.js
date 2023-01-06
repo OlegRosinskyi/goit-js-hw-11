@@ -7,11 +7,17 @@ import axiosPhoto from './axiosPhoto';
 const inputEl = document.querySelector('#search-form input');
 const buttonEl = document.querySelector('#search-form button');
 const divEl = document.querySelector('.gallery');
+
 const formEl = document.querySelector('#search-form');
 buttonEl.classList.add('disabled');
 let valuesString = '';
 
 const DEBOUNCE_DELAY = 300;
+let namberPer_page = 40;
+let namberPage = 1;
+let dataTotal = 0;
+let datatotalHits = 0;
+let pageTotal = 0;
 
 const articleElement = articls => {
   return articls
@@ -71,6 +77,8 @@ const onInput = event => {
     buttonEl.classList.remove('disabled');
     valuesString = valuesString.trim();
     console.log(valuesString);
+    namberPage = 1;
+    console.log(namberPage);
     // return valuesString;
   }
 };
@@ -86,33 +94,66 @@ const searchPhoto = event => {
   //  elements: { searchQuery },
   //} = event.currentTarget;
   if (valuesString === '') {
-    return alert('Please fill in all the fields!');
+    return alert(
+      '"Sorry, there are no images matching your search query. Please try again."'
+    );
   }
 
-  // console.log(`text: ${searchQuery.value}`);
-  // console.log(`textLonge: ${searchQuery.value.length}`);
-
-  //const formData = {
-  //  text,
-  //};
-  //console.log(formData);
-  //event.currentTarget.reset();
   console.log(valuesString);
-  axiosPhoto(valuesString)
-    .then(res => res.data.hits)
-
-    .then(articls => {
-      console.log(articls.status);
-      console.log(articls);
-      if (articls.status === 404) {
+  axiosPhoto(valuesString, namberPage, namberPer_page)
+    .then(res => {
+      console.log(res);
+      if (res.status === 404) {
         divEl.innerHTML = '';
         Notiflix.Notify.failure(
           '"Sorry, there are no images matching your search query. Please try again."'
         );
+        return;
       } else {
-        divEl.innerHTML = '';
+        dataTotal = res.data.total;
+        console.log(dataTotal);
+        datatotalHits = res.data.totalHits;
+        console.log(datatotalHits);
+        if (dataTotal > datatotalHits) {
+          pageTotal = Math.ceil(datatotalHits / namberPer_page);
+        } else {
+          pageTotal = Math.ceil(dataTotal / namberPer_page);
+        }
+        console.log(pageTotal);
+        return res.data.hits;
+      }
+    })
 
-        divEl.innerHTML = articleElement(articls);
+    .then(articls => {
+      console.log(articls.status);
+      console.log(articls);
+      if (dataTotal === 0) {
+        // divEl.innerHTML = '';
+        Notiflix.Notify.failure(
+          'Sorry, there are no images matching your search query. Please try again.'
+        );
+        //if (articls.status === 404) {
+        //  divEl.innerHTML = '';
+        //  Notiflix.Notify.failure(
+        //    '"Sorry, there are no images matching your search query. Please try again."'
+        //  );
+      } else {
+        if (namberPage === 1) {
+          //divEl.innerHTML = '';
+          divEl.innerHTML = articleElement(articls);
+        } else {
+          // const divAddEl = document.querySelector('.photo-card');
+          divEl.insertAdjacentHTML('beforeend', articleElement(articls));
+        }
+        if (pageTotal === namberPage) {
+          buttonEl.classList.add('disabled');
+          Notiflix.Notify.info(
+            "We're sorry, but you've reached the end of search results."
+          );
+        } else {
+          namberPage = namberPage + 1;
+          console.log(namberPage);
+        }
       }
     })
     .catch(err => {
