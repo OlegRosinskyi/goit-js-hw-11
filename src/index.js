@@ -62,7 +62,7 @@ const articleElement = articls => {
 const onInput = event => {
   event.preventDefault();
 
-  console.log(event.target.value.length);
+  // console.log(event.target.value.length);
   const valuelongth = event.target.value.length;
   valuesString = event.target.value;
   let element = '';
@@ -75,10 +75,11 @@ const onInput = event => {
   else {
     // console.log(valuesString);
     buttonEl.classList.remove('disabled');
+    buttonEl.textContent = 'Search';
     valuesString = valuesString.trim();
-    console.log(valuesString);
+    // console.log(valuesString);
     namberPage = 1;
-    console.log(namberPage);
+    // console.log(namberPage);
     // return valuesString;
   }
 };
@@ -86,7 +87,7 @@ const onInput = event => {
 inputEl.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 //inputEl.addEventListener('input', onInput);
 
-const searchPhoto = event => {
+const searchPhoto = async event => {
   event.preventDefault();
   //console.log(event.currentTarget.elements[0]);
 
@@ -99,8 +100,8 @@ const searchPhoto = event => {
     );
   }
 
-  console.log(valuesString);
-  axiosPhoto(valuesString, namberPage, namberPer_page)
+  // console.log(valuesString);
+  await axiosPhoto(valuesString, namberPage, namberPer_page)
     .then(res => {
       console.log(res);
       if (res.status === 404) {
@@ -113,20 +114,20 @@ const searchPhoto = event => {
         dataTotal = res.data.total;
         console.log(dataTotal);
         datatotalHits = res.data.totalHits;
-        console.log(datatotalHits);
+        // console.log(datatotalHits);
         if (dataTotal > datatotalHits) {
-          pageTotal = Math.ceil(datatotalHits / namberPer_page);
+          //   pageTotal = Math.ceil(datatotalHits / namberPer_page);
         } else {
           pageTotal = Math.ceil(dataTotal / namberPer_page);
         }
-        console.log(pageTotal);
+        // console.log(pageTotal);
         return res.data.hits;
       }
     })
 
     .then(articls => {
-      console.log(articls.status);
-      console.log(articls);
+      // console.log(articls.status);
+      // console.log(articls);
       if (dataTotal === 0) {
         // divEl.innerHTML = '';
         Notiflix.Notify.failure(
@@ -148,15 +149,17 @@ const searchPhoto = event => {
         }
         if (pageTotal === namberPage) {
           buttonEl.classList.add('disabled');
+          //buttonEl.textContent = 'Search';
           Notiflix.Notify.info(
             "We're sorry, but you've reached the end of search results."
           );
         } else {
+          buttonEl.textContent = 'next page ?';
           Notiflix.Notify.info(
             `You can also view ${pageTotal - namberPage} pages`
           );
           namberPage = namberPage + 1;
-          console.log(namberPage);
+          // console.log(namberPage);
         }
       }
     })
