@@ -14,15 +14,15 @@ body {
 .body_class{
 position: relative;
 
-padding-top: 40px;
+
 padding-bottom: 40px;
 }
-#search-box {
+.search-form {
   background-color: rgb(24, 168, 224);
-  font: inherit;
-  padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
+  
+ width: auto;
+ height: 40px;
+  
 }
 .disabled {
   pointer-events: none;
@@ -32,14 +32,15 @@ padding-bottom: 40px;
 
 .input_class{
   position: fixed;
-    bottom: (0 + 100vmin);
+    bottom: (20px + 100vmin);
+   
       
    
 }
 .btn_class
 {
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
   }
 
 .search-form{
@@ -64,12 +65,18 @@ padding-bottom: 40px;
 
 .gallery {
   display: flex;
+  padding-left: auto;
+  padding-right: auto;
   flex-wrap: wrap;
   gap: 10px;
   align-items: baseline;
   row-gap: 15px;
 }
 .photo-card{
+display: flex;
+  flex-direction: column;
+  
+    align-items: center;
   width: calc((100% - 40px) / 4);
   height: auto;
 }
@@ -77,8 +84,10 @@ padding-bottom: 40px;
 .info {
   
   display: flex;
-  justify-content: space-around;
-
+   
+  flex-wrap: wrap;
+gap: 10px;
+justify-content: center;
   
 }
 .info-item{
@@ -86,5 +95,6 @@ padding-bottom: 40px;
   flex-direction: column;
   
   align-items: center;
+  margin-right: 5px;
 }
 

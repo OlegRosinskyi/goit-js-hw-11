@@ -39,7 +39,7 @@ const articleElement = articls => {
         //if (articls.length === 1) {
         return `
    <div class="photo-card">
-  <img src="${webformatURL}" alt="${tags}" width="360" height="294"loading="lazy" />
+  <img class="photo" src="${webformatURL}" alt="${tags}" width="360" height="294"loading="lazy" />
   <div class="info">
     <p class="info-item">
       <b>Likes</b>
