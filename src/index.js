@@ -2,7 +2,14 @@ import './css/styles.css';
 var debounce = require('lodash.debounce');
 import Notiflix from 'notiflix';
 //import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 import axiosPhoto from './axiosPhoto';
+
+new SimpleLightbox('.some-element a', {
+  /* options */
+});
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const inputEl = document.querySelector('#search-form input');
 const buttonEl = document.querySelector('#search-form button');
@@ -38,8 +45,11 @@ const articleElement = articls => {
       }) => {
         //if (articls.length === 1) {
         return `
-   <div class="photo-card">
-  <img class="photo" src="${webformatURL}" alt="${tags}" width="360" height="294"loading="lazy" />
+         
+    <div class="photo-card">
+  <a class="gallery__item" href="${largeImageURL}">
+  <img class="gallery__image" src="${webformatURL}" alt="${tags}" title="${tags}" width="360" height="294"loading="lazy" />
+ </a>
   <div class="info">
     <p class="info-item">
       <b>Likes</b>
@@ -58,6 +68,7 @@ const articleElement = articls => {
       <span>${downloads}</span>
     </p>
   </div>
+  
 </div> `;
       }
     )
@@ -140,9 +151,13 @@ const searchPhoto = async event => {
         //divEl.innerHTML = '';
         Notiflix.Notify.info(`Hooray! We found ${datatotalHits} images.`);
         divEl.innerHTML = articleElement(articls);
+        let gallery = new SimpleLightbox('.gallery a');
+        gallery.on('show.simplelightbox', function () {});
       } else {
         // const divAddEl = document.querySelector('.photo-card');
         divEl.insertAdjacentHTML('beforeend', articleElement(articls));
+        let gallery = new SimpleLightbox('.gallery a');
+        gallery.on('show.simplelightbox', function () {});
       }
       if (pageTotal === namberPage) {
         buttonEl.classList.add('disabled');
@@ -168,3 +183,13 @@ const searchPhoto = async event => {
 };
 
 formEl.addEventListener('submit', searchPhoto);
+
+//let gallery = new SimpleLightbox('.gallery a');
+//gallery.on('show.simplelightbox', function () {});
+
+//gallery.on('error.simplelightbox', function (e) {
+// console.log(e); // some usefull information
+//});
+// with jQuery nearly the same
+let gallery = new SimpleLightbox('.gallery a');
+gallery.on('show.simplelightbox', function () {});
