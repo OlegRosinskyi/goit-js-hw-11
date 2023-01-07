@@ -140,6 +140,7 @@ const searchPhoto = event => {
       } else {
         if (namberPage === 1) {
           //divEl.innerHTML = '';
+          Notiflix.Notify.info(`Hooray! We found ${datatotalHits} images.`);
           divEl.innerHTML = articleElement(articls);
         } else {
           // const divAddEl = document.querySelector('.photo-card');
@@ -151,6 +152,9 @@ const searchPhoto = event => {
             "We're sorry, but you've reached the end of search results."
           );
         } else {
+          Notiflix.Notify.info(
+            `You can also view ${pageTotal - namberPage} pages`
+          );
           namberPage = namberPage + 1;
           console.log(namberPage);
         }
