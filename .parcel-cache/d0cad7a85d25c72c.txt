@@ -42,7 +42,7 @@
 112C:\PrpjectLessonJS\goit-js-hw-11\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV4\files\file1.txt133169397519939090 0
 90C:\PrpjectLessonJS\goit-js-hw-11\node_modules\@parcel\core\test\fixtures\duplicate-targets133169397526950868 1
 74C:\PrpjectLessonJS\goit-js-hw-11\node_modules\sass\types\value\string.d.ts133169397523766537 0
-37C:\PrpjectLessonJS\goit-js-hw-11\dist133174648522275223 1
+37C:\PrpjectLessonJS\goit-js-hw-11\dist133175644142968856 1
 64C:\PrpjectLessonJS\goit-js-hw-11\node_modules\axios\lib\platform133169414718366776 1
 76C:\PrpjectLessonJS\goit-js-hw-11\node_modules\css-what\lib\commonjs\index.js133169397510068409 0
 106C:\PrpjectLessonJS\goit-js-hw-11\node_modules\htmlnano\docs\versioned_docs\version-1.1.1\060-contribute.md133169397522770969 0
@@ -58,8 +58,8 @@
 88C:\PrpjectLessonJS\goit-js-hw-11\node_modules\svgo\plugins\removeUselessStrokeAndFill.js133169397522311973 0
 44C:\PrpjectLessonJS\goit-js-hw-11\.htmlnanorc133106460800000000 0
 80C:\PrpjectLessonJS\goit-js-hw-11\node_modules\htmlnano\lib\modules\minifyJson.js133169397517158561 0
-51C:\PrpjectLessonJS\goit-js-hw-11\src\css\styles.css133174612770048881 0
-45C:\PrpjectLessonJS\goit-js-hw-11\package.json133172896907537411 0
+51C:\PrpjectLessonJS\goit-js-hw-11\src\css\styles.css133175640782773665 0
+45C:\PrpjectLessonJS\goit-js-hw-11\package.json133175491732767960 0
 43C:\PrpjectLessonJS\goit-js-hw-11\.gitignore133169382700828428 0
 63C:\PrpjectLessonJS\goit-js-hw-11\node_modules\nan\nan_private.h133169397516861249 0
 77C:\PrpjectLessonJS\goit-js-hw-11\node_modules\caniuse-lite\data\regions\LA.js133169397542733635 0
@@ -105,7 +105,7 @@
 76C:\PrpjectLessonJS\goit-js-hw-11\node_modules\posthtml-match-helper\index.js133169397509093681 0
 55C:\PrpjectLessonJS\goit-js-hw-11\node_modules\form-data133169414717575536 1
 56C:\PrpjectLessonJS\goit-js-hw-11\node_modules\sass\types133169397523494398 1
-50C:\PrpjectLessonJS\goit-js-hw-11\src\axiosPhoto.js133174609214090809 0
+50C:\PrpjectLessonJS\goit-js-hw-11\src\axiosPhoto.js133175641774362118 0
 45C:\PrpjectLessonJS\goit-js-hw-11\README.uk.md133106460800000000 0
 84C:\PrpjectLessonJS\goit-js-hw-11\node_modules\svgo\plugins\addClassesToSVGElement.js133169397514090200 0
 63C:\PrpjectLessonJS\goit-js-hw-11\node_modules\boolbase\index.js133169397510396044 0
@@ -118,13 +118,13 @@
 115C:\PrpjectLessonJS\goit-js-hw-11\node_modules\parcel-reporter-clean-dist\test\fixtures\packageV2\files\embed\embed2133169397522000124 1
 95C:\PrpjectLessonJS\goit-js-hw-11\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\module.c133169397522336424 0
 67C:\PrpjectLessonJS\goit-js-hw-11\node_modules\domutils\lib\index.js133169397511415543 0
-47C:\PrpjectLessonJS\goit-js-hw-11\src\index.html133174609143240631 0
+47C:\PrpjectLessonJS\goit-js-hw-11\src\index.html133175641840345517 0
 103C:\PrpjectLessonJS\goit-js-hw-11\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\Makefile133169397516457904 0
 75C:\PrpjectLessonJS\goit-js-hw-11\node_modules\fast-glob\out\utils\stream.js133169397518074080 0
 78C:\PrpjectLessonJS\goit-js-hw-11\node_modules\htmlnano\lib\modules\minifyJs.js133169397517029204 0
 55C:\PrpjectLessonJS\goit-js-hw-11\node_modules\base64-js133172896906854408 1
 70C:\PrpjectLessonJS\goit-js-hw-11\node_modules\supports-color\readme.md133169397511760958 0
-45C:\PrpjectLessonJS\goit-js-hw-11\src\index.js133174648582931874 0
+45C:\PrpjectLessonJS\goit-js-hw-11\src\index.js133175644141471481 0
 54C:\PrpjectLessonJS\goit-js-hw-11\node_modules\css-tree133169397525854876 1
 93C:\PrpjectLessonJS\goit-js-hw-11\node_modules\@swc\helpers\src\_class_apply_descriptor_set.js133169397524121125 0
 91C:\PrpjectLessonJS\goit-js-hw-11\node_modules\@swc\helpers\lib\_class_private_method_set.js133169397518625455 0
@@ -1901,7 +1901,7 @@
 105C:\PrpjectLessonJS\goit-js-hw-11\node_modules\parcel-reporter-clean-dist\test\fixtures\files\embed\embed2133169397521670670 1
 90C:\PrpjectLessonJS\goit-js-hw-11\node_modules\parcel-reporter-clean-dist\src\opsLimiter.js133169397515487106 0
 99C:\PrpjectLessonJS\goit-js-hw-11\node_modules\@parcel\utils\test\input\sourcemap\source-root.js.map133169397524353847 0
-59C:\PrpjectLessonJS\goit-js-hw-11\dist\index.975ef6c8.js.map133174648522275223 0
+59C:\PrpjectLessonJS\goit-js-hw-11\dist\index.975ef6c8.js.map133175644142968856 0
 59C:\PrpjectLessonJS\goit-js-hw-11\node_modules\lmdb\index.js133169397525509176 0
 91C:\PrpjectLessonJS\goit-js-hw-11\node_modules\parcel-reporter-clean-dist\src\removeFiles.js133169397516202729 0
 116C:\PrpjectLessonJS\goit-js-hw-11\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\LICENSE133169397509329030 0
@@ -4593,7 +4593,7 @@
 95C:\PrpjectLessonJS\goit-js-hw-11\node_modules\@parcel\core\test\fixtures\custom-format-mismatch133169397526888769 1
 95C:\PrpjectLessonJS\goit-js-hw-11\node_modules\@parcel\core\test\fixtures\custom-targets-distdir133169397526920071 1
 96C:\PrpjectLessonJS\goit-js-hw-11\node_modules\@parcel\core\test\fixtures\invalid-source-not-file133169397526984392 1
-55C:\PrpjectLessonJS\goit-js-hw-11\dist\index.975ef6c8.js133174648522275223 0
+55C:\PrpjectLessonJS\goit-js-hw-11\dist\index.975ef6c8.js133175644142948179 0
 102C:\PrpjectLessonJS\goit-js-hw-11\node_modules\@parcel\core\test\fixtures\invalid-target-source-missing133169397526993460 1
 94C:\PrpjectLessonJS\goit-js-hw-11\node_modules\@parcel\core\lib\requests\ParcelConfigRequest.js133169397525109095 0
 103C:\PrpjectLessonJS\goit-js-hw-11\node_modules\@parcel\core\test\fixtures\invalid-target-source-not-file133169397527003604 1
@@ -4910,8 +4910,8 @@
 59C:\PrpjectLessonJS\goit-js-hw-11\node_modules\.bin\svgo.cmd133169397559014087 0
 57C:\PrpjectLessonJS\goit-js-hw-11\node_modules\.bin\terser133169397559024052 0
 61C:\PrpjectLessonJS\goit-js-hw-11\node_modules\.bin\terser.cmd133169397559014087 0
-56C:\PrpjectLessonJS\goit-js-hw-11\dist\index.77a9bc14.css133174642524950236 0
-60C:\PrpjectLessonJS\goit-js-hw-11\dist\index.77a9bc14.css.map133174642524950236 0
+56C:\PrpjectLessonJS\goit-js-hw-11\dist\index.77a9bc14.css133175539484737133 0
+60C:\PrpjectLessonJS\goit-js-hw-11\dist\index.77a9bc14.css.map133175539484737133 0
 65C:\PrpjectLessonJS\goit-js-hw-11\assets\actions-config-step-1.png133106460800000000 0
 56C:\PrpjectLessonJS\goit-js-hw-11\assets\how-it-works.png133106460800000000 0
 57C:\PrpjectLessonJS\goit-js-hw-11\assets\repo-settings.png133106460800000000 0
