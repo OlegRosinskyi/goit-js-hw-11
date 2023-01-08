@@ -13,6 +13,8 @@ body {
 }
 .body_class{
 position: relative;
+margin-top: 0;
+margin-bottom: 0;
 
 
 padding-bottom: 40px;
@@ -29,13 +31,20 @@ padding-bottom: 40px;
   /* <----------- */
   opacity: 0.5;
 }
+.input_box{
+  display: inline-block;
+  background-color: rgb(24, 168, 224);
+  width: 100%;
+  height: 40px;
 
+position: fixed;
+  bottom: (20px + 100vmin);
+display: flex;
+  justify-content: center;
+}
 .input_class{
-  position: fixed;
-    bottom: (20px + 100vmin);
-   
-      
-   
+height: 26px;
+  margin-top: 6px;
 }
 .btn_class
 {

@@ -12,6 +12,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const inputEl = document.querySelector('#search-form input');
+const spanEl = document.querySelector('#search-form span');
 const buttonEl = document.querySelector('#search-form button');
 const divEl = document.querySelector('.gallery');
 const bodyEl = document.querySelector('body');
@@ -19,9 +20,6 @@ console.log(bodyEl);
 const formEl = document.querySelector('#search-form');
 buttonEl.classList.add('disabled');
 bodyEl.classList.add('body_class');
-//inputEl.classList.add('input_class');
-//buttonEl.classList.add('btn_class');
-
 let valuesString = '';
 
 const DEBOUNCE_DELAY = 300;
@@ -146,8 +144,9 @@ const searchPhoto = async event => {
       return;
     } else {
       if (namberPage === 1) {
-        inputEl.classList.add('input_class');
+        spanEl.classList.add('input_box');
         buttonEl.classList.add('btn_class');
+        inputEl.classList.add('input_class');
         //divEl.innerHTML = '';
         Notiflix.Notify.info(`Hooray! We found ${datatotalHits} images.`);
         divEl.innerHTML = articleElement(articls);
@@ -161,7 +160,10 @@ const searchPhoto = async event => {
       }
       if (pageTotal === namberPage) {
         buttonEl.classList.add('disabled');
-
+        spanEl.classList.remove('input_box');
+        buttonEl.classList.remove('btn_class');
+        inputEl.classList.remove('input_class');
+        buttonEl.textContent = 'submit';
         //buttonEl.textContent = 'Search';
         Notiflix.Notify.info(
           "We're sorry, but you've reached the end of search results."
@@ -176,6 +178,7 @@ const searchPhoto = async event => {
     }
   } catch (error) {
     console.log(error.message);
+    spanEl.classList.remove('input_box');
     inputEl.classList.remove('input_class');
     buttonEl.classList.remove('btn_class');
     divEl.innerHTML = '';
@@ -184,12 +187,5 @@ const searchPhoto = async event => {
 
 formEl.addEventListener('submit', searchPhoto);
 
-//let gallery = new SimpleLightbox('.gallery a');
-//gallery.on('show.simplelightbox', function () {});
-
-//gallery.on('error.simplelightbox', function (e) {
-// console.log(e); // some usefull information
-//});
-// with jQuery nearly the same
 let gallery = new SimpleLightbox('.gallery a');
 gallery.on('show.simplelightbox', function () {});
